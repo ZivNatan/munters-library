@@ -1,0 +1,196 @@
+[
+  {
+    "id": "b1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publicationDate": 2008,
+    "description": "A handbook of agile software craftsmanship.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "publicationDate": 1999,
+    "description": "Classic tips for pragmatic software development.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "publicationDate": 2020,
+    "description": "Deep dive into JavaScript core mechanisms.",
+    "isCheckedOut": true
+  },
+    {
+    "id": "b1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publicationDate": 2008,
+    "description": "A handbook of agile software craftsmanship.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "publicationDate": 1999,
+    "description": "Classic tips for pragmatic software development.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "publicationDate": 2020,
+    "description": "Deep dive into JavaScript core mechanisms.",
+    "isCheckedOut": true
+  },
+    {
+    "id": "b1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publicationDate": 2008,
+    "description": "A handbook of agile software craftsmanship.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "publicationDate": 1999,
+    "description": "Classic tips for pragmatic software development.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "publicationDate": 2020,
+    "description": "Deep dive into JavaScript core mechanisms.",
+    "isCheckedOut": true
+  },
+    {
+    "id": "b1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publicationDate": 2008,
+    "description": "A handbook of agile software craftsmanship.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "publicationDate": 1999,
+    "description": "Classic tips for pragmatic software development.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "publicationDate": 2020,
+    "description": "Deep dive into JavaScript core mechanisms.",
+    "isCheckedOut": true
+  },
+    {
+    "id": "b1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publicationDate": 2008,
+    "description": "A handbook of agile software craftsmanship.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "publicationDate": 1999,
+    "description": "Classic tips for pragmatic software development.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "publicationDate": 2020,
+    "description": "Deep dive into JavaScript core mechanisms.",
+    "isCheckedOut": true
+  },
+    {
+    "id": "b1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publicationDate": 2008,
+    "description": "A handbook of agile software craftsmanship.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "publicationDate": 1999,
+    "description": "Classic tips for pragmatic software development.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "publicationDate": 2020,
+    "description": "Deep dive into JavaScript core mechanisms.",
+    "isCheckedOut": true
+  },
+    {
+    "id": "b1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publicationDate": 2008,
+    "description": "A handbook of agile software craftsmanship.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "publicationDate": 1999,
+    "description": "Classic tips for pragmatic software development.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "publicationDate": 2020,
+    "description": "Deep dive into JavaScript core mechanisms.",
+    "isCheckedOut": true
+  },
+    {
+    "id": "b1",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publicationDate": 2008,
+    "description": "A handbook of agile software craftsmanship.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b2",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "publicationDate": 1999,
+    "description": "Classic tips for pragmatic software development.",
+    "isCheckedOut": false
+  },
+  {
+    "id": "b3",
+    "title": "You Don't Know JS Yet",
+    "author": "Kyle Simpson",
+    "publicationDate": 2020,
+    "description": "Deep dive into JavaScript core mechanisms.",
+    "isCheckedOut": true
+  }
+
+
+]

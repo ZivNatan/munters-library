@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+app-root, :host {
+  display: block;
+  height: 100%;
+}
+
+/* page layout */
+.page {
+  height: 100dvh;              /* mobile-safe viewport */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;            /* prevent outer scroll */
+}
+
+.pager{
+    display: flex;
+    padding: 0 12px;
+    gap: 8px;
+    height: 60px;
+    align-items: center;
+}
+
+.label{
+    margin-right: 4px;
+}
+
+.main-title{
+    width: 100%;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 12px;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(0,0,0,0.15);
+  border-top-color: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ffcccc;
+  border-radius: 14px;
+  background: #fff5f5;
+}

@@ -1,0 +1,64 @@
+<section class="page">
+  <header class="top">
+    <button type="button" class="btn" (click)="back()">← Back</button>
+  </header>
+  @if (isLoading()) {
+    <article class="card">
+      <p class="desc">Loading…</p>
+    </article>
+  } @else {
+      @if (book(); as b) {
+        <article class="card">
+          <h1 class="title">{{ b.title }}</h1>
+          <p class="meta">{{ b.author }} • {{ b.publicationDate }}</p>
+
+          @if (b.description) {
+            <p class="desc">{{ b.description }}</p>
+          } @else {
+            <p class="desc muted">No description</p>
+          }
+
+          <div class="badges">
+            <span class="badge" [class.badge--out]="b.isCheckedOut">
+              {{ b.isCheckedOut ? 'Checked out' : 'Available' }}
+            </span>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn" (click)="toggleCheckout()">
+              Toggle checkout
+            </button>
+
+            <button type="button" class="btn" (click)="openEdit()">
+                Edit
+            </button>
+
+            <button type="button" class="btn danger" (click)="delete()">
+              Delete
+            </button>
+          </div>
+        </article>
+          <app-modal
+            [open]="isEditOpen()"
+            [title]="'Edit book'"
+            (close)="closeEdit()"
+    >
+      <app-book-form
+        [book]="b"
+        (cancel)="closeEdit()"
+        (submitForm)="saveEditedBook($event)"
+      />
+    </app-modal>
+      } @else {
+        <article class="card">
+          <h1 class="title">Book not found</h1>
+          <p class="desc muted">
+            The book id in the URL doesn't exist.
+          </p>
+          <button type="button" class="btn" (click)="back()">Go back</button>
+        </article>
+      }
+  }
+
+</section>
+

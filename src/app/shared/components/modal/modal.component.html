@@ -1,0 +1,14 @@
+@if (open()) {
+  <div class="backdrop" (click)="onBackdropClick()">
+    <div class="panel" (click)="$event.stopPropagation()">
+      <header class="panel__header">
+        <h2 class="panel__title">{{ title() }}</h2>
+        <button type="button" class="x" (click)="close.emit()">✕</button>
+      </header>
+
+      <div class="panel__content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+}

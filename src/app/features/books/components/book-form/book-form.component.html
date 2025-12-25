@@ -1,0 +1,41 @@
+@if (form) {
+<form class="form"  [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <label>Title *</label>
+    <input type="text" formControlName="title" />
+    @if (form.controls.title.touched && form.controls.title.invalid) {
+      <small class="err">Title is required</small>
+    }
+  </div>
+
+  <div class="row">
+    <label>Author *</label>
+    <input type="text" formControlName="author" />
+    @if (form.controls.author.touched && form.controls.author.invalid) {
+      <small class="err">Author is required</small>
+    }
+  </div>
+
+  <div class="row">
+    <label>Publication year *</label>
+    <input type="number" formControlName="publicationDate" />
+    @if (form.controls.publicationDate.touched && form.controls.publicationDate.invalid) {
+      <small class="err">Enter a valid year</small>
+    }
+  </div>
+
+  <div class="row">
+    <label>Description</label>
+    <textarea rows="4" formControlName="description"></textarea>
+  </div>
+
+
+  <div class="actions">
+    <button type="button" (click)="cancel.emit()">Cancel</button>
+    <button type="submit">
+      {{ isEdit() ? 'Save changes' : 'Add book' }}
+    </button>
+  </div>
+</form>
+
+}

@@ -1,0 +1,100 @@
+<section class="page">
+  <header class="header">
+    <h1 class="main-title">Library</h1>
+
+    <div class="sorting-container">
+        <select class="select" [value]="vm.sortKey()" (change)="vm.setSortKey($any($event.target).value)">
+        <option value="author">Author</option>
+        <option value="publicationDate">Publication date</option>
+        <option value="catalogNumber">Catalog number</option>
+        </select>
+
+        <button type="button" class="btn" (click)="vm.toggleSortDir()">
+        {{ vm.sortDir() === 'asc' ? '↑' : '↓' }}
+        </button>
+     </div>
+
+     <input
+      class="search"
+      type="text"
+      [formControl]="vm.searchCtrl"
+      placeholder="Search by title..."
+      aria-label="Search by title"
+    />
+
+    <button type="button" class="primary" (click)="vm.openAdd()">+ Add book</button>
+  </header>
+
+  <div class="list">
+    @if (vm.isLoading()) {
+    <div class="loading">
+        <div class="spinner"></div>
+        <span>Loading books…</span>
+    </div>
+    } @else {
+        @if (vm.loadError()) {
+            <div class="error">
+            {{ vm.loadError() }}
+            </div>
+        } 
+         @else{
+        <div class="grid">
+        @for (book of vm.pagedBooks(); track book.id) {
+            <article class="card">
+            <div class="card__top">
+                <h2 class="title">{{ book.title }}</h2>
+                <p class="meta">{{ book.author }} • {{ book.publicationDate }}</p>
+            </div>
+
+            @if (book.description) {
+                <p class="desc">{{ book.description }}</p>
+            }
+
+            <div class="actions">
+                <button
+                    type="button"
+                    class="btn"
+                    (click)="vm.toggleCheckedOut(book)"
+                    >
+                    {{ book.isCheckedOut ? 'Checked םut' : 'Available' }}
+                </button>
+                <button type="button" class="btn" (click)="goToDetails(book.id)">Details</button>
+                <button type="button" class="btn" (click)="vm.openEdit(book)">Edit</button>
+                <button type="button" class="btn" (click)="vm.deleteBook(book.id)">Delete</button>
+            </div>
+            </article>
+        }
+        </div>
+  }
+    }
+  </div>
+
+          <div class="pager">
+      <div class="pager__left">
+        <label class="label">Page size:</label>
+        <select [value]="vm.pageSize()" (change)="vm.setPageSize(+$any($event.target).value)">
+          <option [value]="10">10</option>
+          <option [value]="50">50</option>
+          <option [value]="100">100</option>
+        </select>
+      </div>
+
+      <div class="pager__right">
+        <button class="btn" (click)="vm.prevPage()" [disabled]="vm.pageIndex() === 0">Prev</button>
+        <span>{{ vm.pageIndex() + 1 }} / {{ vm.totalPages() }}</span>
+        <button class="btn" (click)="vm.nextPage()" [disabled]="vm.pageIndex() + 1 >= vm.totalPages()">Next</button>
+      </div>
+    </div>
+
+  <app-modal
+    [open]="vm.isFormOpen()"
+    [title]="vm.editingBook() ? 'Edit book' : 'Add book'"
+    (close)="vm.closeForm()"
+  >
+    <app-book-form
+      [book]="vm.editingBook()"
+      (cancel)="vm.closeForm()"
+      (submitForm)="vm.saveBook($event)"
+    />
+  </app-modal>
+</section>

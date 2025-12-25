@@ -1,0 +1,48 @@
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.row {
+  display: grid;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    opacity: 0.85;
+  }
+
+  input, textarea {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+}
+
+.checkbox {
+  label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.err {
+  color: #b00020;
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+
+  button {
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: transparent;
+    cursor: pointer;
+  }
+}
